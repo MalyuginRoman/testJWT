@@ -1,0 +1,26 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: install CPP-JWT
+    - name: install CPP-JWT
+      run: sudo apt install nlohmann-json3-dev 
+           sudo apt install libgtest-dev
+           sudo apt install libssl-dev
+           mkdir build
+           cd build
+           cmake ..
+           cmake --build . -j
+    - name: make
+      run: make
