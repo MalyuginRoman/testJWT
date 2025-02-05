@@ -6,7 +6,6 @@ set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
 project(jwt VERSION ${PROJECT_VERSION})
 
-find_package(jwt-cpp CONFIG REQUIRED)
 configure_file(version.h.in version.h)
 
 add_executable(jwt_cli main.cpp)
