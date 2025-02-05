@@ -1,0 +1,10 @@
+set(CERT_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/rsa_256")
+set(CMAKE_CXX_FLAGS
+    "${CMAKE_CXX_FLAGS} -DCERT_ROOT_DIR=\"\\\"${CERT_ROOT_DIR}\\\"\"")
+
+add_executable(main main.cpp)
+target_link_libraries(main ${PROJECT_NAME})
+add_test(
+  NAME main
+  COMMAND ./main
+  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
