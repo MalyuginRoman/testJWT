@@ -30,4 +30,4 @@ jobs:
       - run: git clone https://github.com/arun11299/cpp-jwt.git
       - run: cd cpp-jwt && mkdir build && cd build && cmake .. && cmake --build . -j
       - name: make testJWT
-        run: make testJWT
+        run: cd cpp-jwt && make testJWT
