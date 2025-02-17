@@ -9,15 +9,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    permissions: write-all
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
       - run: sudo apt-get update
-      - run: sudo apt-get install libboost-all-dev -y
-      - run: sudo apt-get install -y --no-install-recommends \
-             git
+      - run: sudo apt-get upgrade -y
+      - run: sudo apt-get install -yq --no-install-recommends \
+             git \
+             cmake \
+             build-essential \
+             zlib1g-dev \
+             libcgal-dev \
+             nlohmann-json3-dev \
+             libgtest-dev \
+             libssl-dev
       - run: git config --global http.sslverify false
       - run: git clone https://github.com/arun11299/cpp-jwt.git
       - run: cd cpp-jwt && mkdir build && cd build && \
