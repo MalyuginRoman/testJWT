@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu:20.4
     permissions: write-all
     steps:
       - uses: actions/checkout@v3
@@ -19,7 +19,7 @@ jobs:
       - run: git config --global http.sslverify false
       - run: git clone https://github.com/arun11299/cpp-jwt.git
       - run: export DEBIAN_FRONTEND=noninteractive && \
-             apt-get install -y --no-install-recommends jg\
+             apt-get install -y --no-install-recommends jg \
              git \
              cmake \
              build-essential \
