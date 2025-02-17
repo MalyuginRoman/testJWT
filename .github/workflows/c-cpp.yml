@@ -15,7 +15,7 @@ jobs:
         with:
           submodules: true
       - run: sudo apt-get update && \
-             sudo apt-get upgrade && \
+             sudo apt-get upgrade -y && \
              sudo apt-get install libboost-all-dev -y
       - run: export DEBIAN_FRONTEND=noninteractive && \
              apt-get install -yq --no-install-recommends \
