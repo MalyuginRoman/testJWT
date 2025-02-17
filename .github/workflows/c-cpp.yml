@@ -15,7 +15,8 @@ jobs:
           submodules: true
       - run: sudo apt-get update
       - run: sudo apt-get upgrade -y
-      - run: sudo apt-get install -y \
+      - run: export DEBIAN_FRONTEND=noninteractive && \
+             sudo apt-get install -y \
              git \
              cmake \
              build-essential \
