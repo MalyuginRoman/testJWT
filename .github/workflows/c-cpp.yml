@@ -29,5 +29,7 @@ jobs:
       - run: git config --global http.sslverify false
       - run: git clone https://github.com/arun11299/cpp-jwt.git
       - run: cd cpp-jwt && mkdir build && cd build && cmake .. && cmake --build . -j
+      - run: git clone https://github.com/MalyuginRoman/testJWT
+      - run: cd testJWT
       - name: make testJWT
         run: make testJWT
