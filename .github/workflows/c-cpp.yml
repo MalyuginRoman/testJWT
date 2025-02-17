@@ -15,7 +15,7 @@ jobs:
           submodules: true
       - run: sudo apt-get update
       - run: sudo apt-get upgrade -y
-      - run: sudo apt-get install -yq --no-install-recommends \
+      - run: sudo apt-get install -yq \
              git \
              cmake \
              build-essential \
