@@ -19,8 +19,7 @@ jobs:
       - run: git config --global http.sslverify false
       - run: git clone https://github.com/arun11299/cpp-jwt.git
       - run: export DEBIAN_FRONTEND=noninteractive
-      - run: sudo apt-get update && \
-             sudo apt-get upgrade && \
+      - run: sudo apt-get upgrade && \
              sudo apt-get install -yq --no-install-recommends \
              git \
              cmake \
