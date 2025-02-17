@@ -16,9 +16,9 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get upgrade -y
       - run: export DEBIAN_FRONTEND=noninteractive
+      - run: sudo apt-get install git -y
+      - run: sudo apt-get install cmake -y
       - run: sudo apt-get install -yq --no-install-recommends \
-             git \
-             cmake \
              build-essential \
              zlib1g-dev \
              libcgal-dev \
