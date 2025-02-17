@@ -6,7 +6,7 @@
 #include <cppunit/BriefTestProgressListener.h>
 #include <cppunit/extensions/TestFactoryRegistry.h>
 #include <cppunit/extensions/HelperMacros.h>
-#include "jwt/jwt.hpp"
+#include "jwt-cpp/jwt.h"
 
 class TestJWT : public CPPUNIT_NS::TestCase
 {
