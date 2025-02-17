@@ -16,19 +16,19 @@ jobs:
           submodules: true
       - run: sudo apt-get update
       - run: sudo apt-get install libboost-all-dev -y
-      - run: git config --global http.sslverify false
-      - run: git clone https://github.com/arun11299/cpp-jwt.git
       - run: export DEBIAN_FRONTEND=noninteractive
       - run: sudo apt-get update
       - run: sudo apt-get install -yq --no-install-recommends \
-             libssl-dev \
              git \
              cmake \
              build-essential \
              zlib1g-dev \
              libcgal-dev \
              nlohmann-json3-dev \
-             libgtest-dev
+             libgtest-dev \
+             libssl-dev
+      - run: git config --global http.sslverify false
+      - run: git clone https://github.com/arun11299/cpp-jwt.git
       - run: cd cpp-jwt && mkdir build && cd build && \
              cmake .. && \
              cmake --build . -j
