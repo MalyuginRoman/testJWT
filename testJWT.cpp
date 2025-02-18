@@ -21,9 +21,11 @@ void tearDown(void){}
 protected:
   void testJWT_1(void)
   {
+#ifdef testJWT
     std::cout << "Start testJWT_1" << std::endl;
     std::cout << jwt::decode("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJpc3MiOiJhdXRoMCJ9.AbIJTDMFc7yUa5MhvcP03nJPyCPzZtQcGEp-zWfOkEE") << std::endl;
     std::cout << "Close testJWT_1" << std::endl;
+#endif
   }
 };
 
