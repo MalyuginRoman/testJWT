@@ -13,4 +13,4 @@ target_compile_definitions(
 )
 
 enable_testing()
-add_test(NAME testJWT COMMAND $<TARGET_FILE:main>)
+add_test(NAME testJWT COMMAND $<TARGET_FILE:testJWT>)
