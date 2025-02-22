@@ -1,6 +1,6 @@
 all:
-	g++ -std=c++17 testJWT.cpp -lcppunit -o testJWT
+	g++ -std=c++17 testJWT.cpp -lcppunit -o test
 test:
-	chmod +x testJWT
+	chmod +x test
 clean:
-	$(RM) testJWT
+	$(RM) test
