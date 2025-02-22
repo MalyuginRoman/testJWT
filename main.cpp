@@ -1,4 +1,4 @@
-#include <jwt.hpp>
+#include <jwt/jwt.hpp>
 
 int main() {
 #ifdef testJWT
