@@ -21,10 +21,10 @@ jobs:
       - run: sudo apt-get install -y git cmake build-essential zlib1g-dev libcgal-dev nlohmann-json3-dev libgtest-dev libssl-dev
       - run: git config --global http.sslverify false
       - run: git clone https://github.com/arun11299/cpp-jwt.git
-      - run: pwd && cd cpp-jwt && mkdir build && cd build && cmake .. && cmake --build . -j && cd ../../ && find ./ -type f -name "jwt.hpp"
+      - run: pwd && cd cpp-jwt && mkdir build && cd build && cmake .. && cmake --build . -j
       - run: git clone https://github.com/MalyuginRoman/testJWT
       - name: make test
-        run: cp -rf testJWT cpp-jwt && cd cpp-jwt/build && make ..
+        run: cp -rf testJWT cpp-jwt && cd cpp-jwt && make 
 
       - name: Checkout Project
         uses: actions/checkout@v4.2.2
