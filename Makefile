@@ -1,3 +1,5 @@
+INCLUDE = ../include
+
 all:
 	g++ -std=c++17 testJWT.cpp -lcppunit -o test
 test:
