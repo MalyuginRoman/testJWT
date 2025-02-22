@@ -1,4 +1,4 @@
-INCLUDE = ../include
+INCLUDES = ../include
 
 all:
 	g++ -std=c++17 testJWT.cpp -lcppunit -o test
