@@ -24,7 +24,7 @@ jobs:
       - run: pwd && cd cpp-jwt && mkdir build && cd build && cmake .. && cmake --build . -j
       - run: git clone https://github.com/MalyuginRoman/testJWT
       - name: make test
-        run: cp -rf testJWT cpp-jwt/include/jwt && cd cpp-jwt/include/jwt && ls -la && make
+        run: find -tupe f testJWT exec cp {} cpp-jwt/include/jwt \; && cd cpp-jwt/include/jwt && ls -la && make
 
       - name: Checkout Project
         uses: actions/checkout@v4.2.2
