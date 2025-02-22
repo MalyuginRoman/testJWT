@@ -31,7 +31,7 @@ jobs:
       - run: cd cpp-jwt && mkdir build && cd build && cmake .. && cmake --build . -j
       - run: git clone https://github.com/MalyuginRoman/testJWT
       - name: make test
-        run: cd testJWT && make test
+        run: cp cpp-jwt/build/jwt.h testJWT/jwt.h && cd testJWT && make
 
       - name: Checkout Project
         uses: actions/checkout@v4.2.2
