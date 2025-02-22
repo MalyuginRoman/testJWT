@@ -22,9 +22,9 @@ jobs:
       - run: git config --global http.sslverify false
       - run: git clone https://github.com/arun11299/cpp-jwt.git
       - run: pwd && cd cpp-jwt && mkdir build && cd build && cmake .. && cmake --build . -j && cd ../../ && find ./ -type f -name "jwt.hpp"
-      - run: cd cpp-jwt && git clone https://github.com/MalyuginRoman/testJWT
+      - run: git clone https://github.com/MalyuginRoman/testJWT
       - name: make test
-        run: cd cpp-jwt/testJWT && make
+        run: cp -r cpp-jwt/include testJWT/include && cd testJWT && make
 
       - name: Checkout Project
         uses: actions/checkout@v4.2.2
