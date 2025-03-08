@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 project(test)
 
-option(test "test test1 function" ON)
+option(test "test testJWT function" ON)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs")
 add_subdirectory(cpp-jwt)
