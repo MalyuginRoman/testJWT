@@ -56,13 +56,11 @@ RM = /usr/bin/cmake -E rm -f
 # Escaping for special characters.
 EQUALS = =
 
-pwd
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = $(pwd)/test-jwt
+CMAKE_SOURCE_DIR = /home/runner/work/testJWT/testJWT/test-jwt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = $(pwd)/test-jwt
+CMAKE_BINARY_DIR = /home/runner/work/testJWT/testJWT/test-jwt
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -134,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/polyakov-av/repo/test-jwt/CMakeFiles /home/polyakov-av/repo/test-jwt//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/testJWT/testJWT/CMakeFiles /home/runner/work/testJWT/testJWT/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/polyakov-av/repo/test-jwt/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/testJWT/testJWT/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
