@@ -56,11 +56,13 @@ RM = /usr/bin/cmake -E rm -f
 # Escaping for special characters.
 EQUALS = =
 
+pwd
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/polyakov-av/repo/test-jwt
+CMAKE_SOURCE_DIR = $(pwd)/test-jwt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/polyakov-av/repo/test-jwt
+CMAKE_BINARY_DIR = $(pwd)/test-jwt
 
 #=============================================================================
 # Targets provided globally by CMake.
