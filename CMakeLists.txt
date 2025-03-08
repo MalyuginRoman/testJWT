@@ -3,10 +3,19 @@ project(test)
 
 option(test "test testJWT function" ON)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage -O0")
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs")
 add_subdirectory(cpp-jwt)
 
 add_executable(main main.cpp)
-#add_executable(testJWT testJWT.cpp)
 target_link_libraries(main cpp-jwt::cpp-jwt)
-#target_link_libraries(testJWT cpp-jwt::cpp-jwt)
+
+target_include_directories(main PRIVATE include)
+target_compile_definitions(
+  main PRIVATE
+  $<$<BOOL:${test}>:testJWT>
+)
+
+enable_testing()
+add_test(NAME main COMMAND $<TARGET_FILE:main>)
