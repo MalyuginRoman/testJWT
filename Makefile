@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/runner/work/testJWT/testJWT/test-jwt
+CMAKE_SOURCE_DIR = /home/runner/work/testJWT/testJWT
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/runner/work/testJWT/testJWT/test-jwt
+CMAKE_BINARY_DIR = /home/runner/work/testJWT/testJWT
 
 #=============================================================================
 # Targets provided globally by CMake.
