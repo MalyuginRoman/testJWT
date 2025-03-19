@@ -8,7 +8,7 @@
 #include <sys/types.h>
 #include <cstring>
 #include <vector>
-
+#include "dop_function.h"
 int game_create(std::vector<game> *games)
 {
     dop_function df;
