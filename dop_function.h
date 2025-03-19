@@ -57,3 +57,12 @@ public:
         return result;
     }
 };
+
+struct game
+{
+    int gameID;
+    int game_status;
+    int connection_player;
+    std::vector<std::string> player_name;
+    std::string player_win;
+};
