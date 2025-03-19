@@ -15,6 +15,7 @@ int main() {
      .add_claim("exp", std::chrono::system_clock::now());
   
   std::error_code ec;
+  std::string enc_str = obj.signature();
   obj = jwt::decode(enc_str, algorithms({"none", "HS256"}), ec, verify(false), secret("secret"));
   #endif
 }
