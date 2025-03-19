@@ -8,7 +8,6 @@
 #include <sys/types.h>
 #include <cstring>
 #include <vector>
-#include "game_creator.h"
 
 int game_create(std::vector<game> *games)
 {
