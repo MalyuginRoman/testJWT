@@ -17,3 +17,6 @@ target_compile_definitions(
 
 enable_testing()
 add_test(NAME main COMMAND $<TARGET_FILE:main>)
+
+add_executable(server_a server.cpp)
+target_link_libraries(server_a cpp-jwt::cpp-jwt)
