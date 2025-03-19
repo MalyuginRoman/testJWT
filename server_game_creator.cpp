@@ -9,7 +9,7 @@
 #include <cstring>
 #include <vector>
 #include "dop_function.h"
-int game_create(std::vector<game> *games)
+int main(std::vector<game> *games)
 {
     dop_function df;
     size_t game_count = games->size();
