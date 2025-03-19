@@ -20,3 +20,6 @@ add_test(NAME main COMMAND $<TARGET_FILE:main>)
 
 add_executable(server_a server_autorization.cpp)
 target_link_libraries(server_a cpp-jwt::cpp-jwt)
+
+add_executable(server_b server_game_creator.cpp)
+target_link_libraries(server_b cpp-jwt::cpp-jwt)
