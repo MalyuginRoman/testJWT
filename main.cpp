@@ -4,6 +4,7 @@
 #include <jwt/jwt.hpp>
 
 int main() {
+  #ifdef testJWT
   using namespace jwt::params;
   jwt::jwt_object obj{algorithm("HS256"), secret("secret")};
   
@@ -15,4 +16,5 @@ int main() {
   
   std::error_code ec;
   obj = jwt::decode(enc_str, algorithms({"none", "HS256"}), ec, verify(false), secret("secret"));
+  #endif
 }
